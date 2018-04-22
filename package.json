@@ -4,8 +4,10 @@
   "description": "Bingo?",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*.test.js",
-    "start": "node index.js"
+    "build": "webpack",
+    "watch": "webpack -w",
+    "serve": "tsc index.ts && node index.js",
+    "start": "concurrently -k -p \"[{name}]\" -n \"WebPack,Node\" \"npm run watch\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,10 @@
   },
   "homepage": "https://github.com/W-Schmitt/bingo#readme",
   "dependencies": {
+    "@types/express": "^4.11.1",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.1.0",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "jquery": "^1.9.1",
     "popper.js": "^1.14.3",
@@ -40,6 +44,9 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
     "jsdoc": "^3.5.5",
-    "mocha": "^5.1.0"
+    "mocha": "^5.1.0",
+    "ts-loader": "^4.2.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }

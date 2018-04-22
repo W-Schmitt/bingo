@@ -61,3 +61,4 @@ typings/
 out/
 dist/
 **/*.js
+*.js
