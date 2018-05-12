@@ -1,0 +1,15 @@
+{
+  "extends": "../.eslintrc.json",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-multi-str": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "no-unused-vars":"warn"
+  },
+  "globals": {
+    "Vue": true
+  }
+}
