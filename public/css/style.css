@@ -1,9 +1,16 @@
 .bingo-tile {
+  display: flex;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1.2rem;
+  align-items: center;
+  justify-content: center;
   margin: .2rem;
-  min-height: 6rem;
+  min-height: 8rem;
+  min-width: 10rem;
+}
+
+.bingo-tile-content {
+  vertical-align: middle;
+  text-align: center;
 }
 
 .ticked {

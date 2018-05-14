@@ -1,6 +1,9 @@
 extends layout.pug
 
 block content
+  script(
+    type="text/javascript"
+  ) const bingo = !{JSON.stringify(bingo.contents)}
   h2= pageTitle
   div.container
     div(
