@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  h2= pageTitle
+  div.container
+    div(
+      id="bingo"
+      class="container-fluid"
+      v-on:update:ticked="tick"
+    )
+      div(
+        is="bingo-line"
+        v-for="line, index in reshapedBingo.lines"
+        v-bind:tiles="line.tiles"
+      )
