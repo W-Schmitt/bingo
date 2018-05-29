@@ -1,1 +1,35 @@
-h1 #{mainConfig.appName}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(
+    href="/"
+  ) #{Config.appName}
+  button.navbar-toggler(
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarAltMarkup"
+    aria-controls="navbarAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  )
+    span.navbar-toggler-icon
+  div.collapse.navbar-collapse#navbarAltMarkup
+    ul.navbar-nav
+      li.nav-item
+        a(
+          class="nav-link"
+          href="/bingo"
+        ) Bingo
+      if !user
+        li.nav-item.nav-link
+          a(
+            href="/signup"
+          ) Sign up
+        li.nav-item.nav-link
+          a(
+            href="/signin"
+          ) Sign in
+      else
+        li.nav-item.nav-link
+          a(
+            href="/signout"
+          ) Sign out
+      span.navbar-text #{user}

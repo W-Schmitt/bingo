@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  h1 Well things went south. Send help!
+  p I have no idea what to do. Maybe you can help?
+  p Anyway, let's see what this says :
+  div.alert.alert-danger
+    h4.alert-heading Code: #{code}
+    p #{error}
