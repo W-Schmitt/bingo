@@ -5,6 +5,7 @@ const { BingoTile } = require('./bingoTile');
 
 class Bingo {
   constructor(words, state) {
+    BingoTile.resetNextId();
     if (words && words.length < Config.cardCount) {
       throw new Error('Too little words in the provided array.');
     }

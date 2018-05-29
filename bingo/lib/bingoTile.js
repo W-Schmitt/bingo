@@ -12,6 +12,9 @@ class BingoTile {
   getWord() {
     return this.word;
   }
+  static resetNextId() {
+    nextId = 0;
+  }
 }
 
 module.exports = { BingoTile };
