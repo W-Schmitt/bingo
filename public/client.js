@@ -21,10 +21,10 @@ Vue.component('bingo-tile', {
       <p class="bingo-tile-content">{{ word || \' \'}}</p>\
     </div>\
   ',
-  props: ['word', 'ticked'],
+  props: ['word', 'ticked', 'id'],
   methods: {
     tick: function () {
-      vm.tick(this.word);
+      vm.tick(this.id);
     },
   },
 });
@@ -32,7 +32,7 @@ Vue.component('bingo-tile', {
 Vue.component('bingo-line', {
   template: '\
     <div class="row bingo-row align-items-center">\
-      <bingo-tile v-for="tile in tiles" :key="tile.word" v-bind:word="tile.word" v-bind:ticked="tile.ticked"></bingo-tile>\
+      <bingo-tile v-for="tile in tiles" :key="tile.word" v-bind:word="tile.word" v-bind:ticked="tile.ticked" v-bind:id="tile.id"></bingo-tile>\
     </div>\
   ',
   props: ['tiles'],
@@ -55,12 +55,11 @@ vm = new Vue({
     },
   },
   methods: {
-    tick: function (word) {
-      if (word) {
-        const tileI = this.tiles.findIndex(cTile => cTile.word === word);
-        this.tiles[tileI].ticked = !this.tiles[tileI].ticked;
-        const rowNr = Math.floor(tileI / this.colCount);
-        const colNr = tileI % this.colCount;
+    tick: function (id) {
+      if (this.tiles[id].word) {
+        this.tiles[id].ticked = !this.tiles[id].ticked;
+        const rowNr = Math.floor(id / this.colCount);
+        const colNr = id % this.colCount;
         this.isWinningTick(colNr, rowNr);
       }
     },
