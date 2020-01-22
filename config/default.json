@@ -1,0 +1,14 @@
+{
+  "Bingo": {
+    "Height": 4,
+    "Width": 4
+  },
+  "Server": {
+    "Port": 3000
+  },
+  "Database": {
+    "Host": "localhost",
+    "Port": 27017,
+    "Name": "bingo"
+  }
+}

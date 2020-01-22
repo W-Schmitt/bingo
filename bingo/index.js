@@ -1,3 +1,3 @@
-const { Bingo } = require('./lib/bingo');
+const lib = require('./lib/bingo')
 
-module.exports = { Bingo };
+module.exports = lib

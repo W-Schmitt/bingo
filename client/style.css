@@ -1,0 +1,19 @@
+.card {
+  display:inline-block;
+  height: 5rem;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.card::first-letter {
+  text-transform: capitalize;
+}
+
+.checked {
+  background: #DDD;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+}

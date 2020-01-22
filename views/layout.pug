@@ -1,35 +1,15 @@
-doctype html
-html(lang="fr")
+html
   head
-    title= pageTitle
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    link(rel="stylesheet", href='/css/bootstrap.min.css')
-    link(rel="stylesheet", href='/css/style.css')
+    block css
+      link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+      link(type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection")
+      link(type="text/css" rel="stylesheet" href="client/style.css"  media="screen,projection")
+    block head_scripts
+    title= title
   body
-    div#mainContainer
-      block headjs
+    block menu
+    div.container
+      block content
+    block footer
 
-      block header
-        include header
-
-      div.container
-        if error
-          div.alert.alert-danger
-            h4.alert-heading #{error.title}
-            p #{error.message}
-        if message
-          div.alert.alert-success
-            h4.alert-heading #{message.title}
-            p #{message.body}
-        block content
-
-
-      block footer
-        include footer
-
-script(src="/jquery.min.js", type="text/javascript")
-script(src="/js/tether.min.js", type="text/javascript")
-script(src="/js/bootstrap.min.js", type="text/javascript")
-
-block js
+    block body_scripts
