@@ -36,7 +36,7 @@
     "webpack": "^4.41.5"
   },
   "devDependencies": {
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.2",
     "standard": "^14.3.1"
   }
