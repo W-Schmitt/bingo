@@ -23,7 +23,7 @@
   "homepage": "https://github.com/W-Schmitt/bingo#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "config": "^3.2.5",
+    "config": "^3.3.8",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "helmet": "^3.21.2",
@@ -33,7 +33,7 @@
     "morgan": "^1.9.1",
     "pug": "^2.0.4",
     "socket.io": "^2.3.0",
-    "webpack": "^4.41.5"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "mocha": "^7.0.0",
